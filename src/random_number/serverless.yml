@@ -1,0 +1,21 @@
+service: lambda-test
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: python3.6
+
+functions:
+  hello:
+    handler: random_number.handler.random_handler
+
+plugins:
+
+  - serverless-python-requirements
+
+custom:
+
+  pythonRequirements:
+
+    dockerizePip: non-linux

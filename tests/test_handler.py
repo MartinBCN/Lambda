@@ -1,5 +1,5 @@
 import unittest
-from src.handler import random_handler
+from src.random_number.handler import random_handler
 
 
 class TestRandomHandler(unittest.TestCase):
