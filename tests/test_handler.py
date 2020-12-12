@@ -1,5 +1,5 @@
 import unittest
-from src.random_number.handler import random_handler
+from random_number_handler import main
 
 
 class TestRandomHandler(unittest.TestCase):
@@ -8,7 +8,7 @@ class TestRandomHandler(unittest.TestCase):
         lower = 1
         upper = 5
         for _ in range(10):
-            result = random_handler({'lower': lower, 'upper': upper}, {})
+            result = main({'lower': lower, 'upper': upper}, {})
             result = result['result']
             self.assertTrue(lower <= result < upper)
 
